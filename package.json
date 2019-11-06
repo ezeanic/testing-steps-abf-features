@@ -1,0 +1,32 @@
+{
+  "name": "sw200-asmt_03",
+  "version": "1.0.0",
+  "description": "Assginment 03, Behavior Driven Development",
+  "author": "Spicklemire",
+  "private": true,
+  "devDependencies": {
+    "@types/jest": "^24.0.15",
+    "@types/node": "^12.6.8",
+    "@typescript-eslint/eslint-plugin": "^1.13.0",
+    "@typescript-eslint/parser": "^1.13.0",
+    "eslint": "^6.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "jest": "^24.8.0",
+    "jest-cucumber": "^2.0.11",
+    "ts-jest": "^24.0.2",
+    "ts-loader": "^6.0.4",
+    "typescript": "^3.5.3",
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.7"
+  },
+  "scripts": {
+    "test": "yarn lint:types && jest --no-cache --coverage",
+    "lint": "yarn lint:types && yarn lint:ci",
+    "build": "webpack",
+    "lint:types": "yarn tsc --noEmit -p .",
+    "lint:ci": "eslint . --ext .tsx,.ts"
+  },
+  "dependencies": {
+    "ts-node": "^8.3.0"
+  }
+}
